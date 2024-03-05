@@ -2,15 +2,63 @@
     "name": "Matches",
     "short_name": "Matches",
     "theme_color": "#b5d19f",
-    "background_color": "#b5d19f",
+    "background_color": "#141416",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
     "start_url": "/",
     "icons": [
       {
-        "src": "image.png",
+        "src": "icons/image.png",
         "sizes": "48x48",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "icons/image.png",
+        "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable any"
       }

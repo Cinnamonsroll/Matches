@@ -64,9 +64,9 @@ export default function Home() {
 
   function addScore(type: string) {
     let points = 0;
-    switch(type) {
+    switch (type) {
       case "speaker": {
-        if(match.state === "auton" || match.amplified) points += 5;
+        if (match.state === "auton" || match.amplified) points += 5;
         else points += 2;
         break;
       }
@@ -74,7 +74,10 @@ export default function Home() {
         points += 2;
         break;
       }
-      case "climb":
+      case "climb": {
+        points += 3;
+        break;
+      }
       case "amp":
       case "trap":
       case "park": {
@@ -96,7 +99,7 @@ export default function Home() {
       toast.success("Amplified period ended!");
     }, 10000);
   };
-  
+
 
   return (
     <div className="h-screen w-full flex flex-col gap-2 p-4 bg-tertiary">
@@ -132,8 +135,8 @@ export default function Home() {
       )}
       {match.started && match.time === 0 && (
         <div className="flex items-center justify-center w-full h-full">
-            <h1 className="text-5xl font-bold text-white">{match.score}</h1>
-            <button
+          <h1 className="text-5xl font-bold text-white">{match.score}</h1>
+          <button
             className="bg-primary shadow-lg rounded-md px-6 py-3 text-black font-bold"
             onClick={() => {
               setMatch({
