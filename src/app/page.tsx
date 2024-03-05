@@ -70,9 +70,12 @@ export default function Home() {
         else points += 2;
         break;
       }
+      case "taxi": {
+        points += 2;
+        break;
+      }
       case "climb":
       case "amp":
-      case "taxi":
       case "trap":
       case "park": {
         points += 1;
@@ -128,13 +131,6 @@ export default function Home() {
       )}
       {match.started && match.time === 0 && (
         <div className="flex items-center justify-center w-full h-full">
-          <motion.div
-            className="w-full h-full p-4 text-5xl text-white flex items-center justify-center"
-            initial={{ scale: 0 }}
-            animate={scoreControl}
-            exit={{ scale: 0 }}
-            transition={{ duration: 0.2 }}
-          >
             <h1>{match.score}</h1>
             <button
             className="bg-primary shadow-lg rounded-md px-6 py-3 text-black font-bold"
@@ -151,7 +147,6 @@ export default function Home() {
           >
             Restart
           </button>
-          </motion.div>
         </div>
       )}
       {match.started && match.time > 0 && (
