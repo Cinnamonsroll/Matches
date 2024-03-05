@@ -1,7 +1,7 @@
 {
     "name": "Matches",
     "short_name": "Matches",
-    "theme_color": "#b5d19f",
+    "theme_color": "#141416",
     "background_color": "#141416",
     "display": "standalone",
     "orientation": "portrait",
