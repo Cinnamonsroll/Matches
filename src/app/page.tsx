@@ -95,7 +95,7 @@ export default function Home() {
       setMatch({ ...match, amplified: false })
       toast.success("Amplified period ended!")
     }, 10000);
-  };
+  }
 
   return (
     <div className="h-screen w-full flex flex-col gap-2 p-4 bg-tertiary">
