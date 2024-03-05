@@ -89,13 +89,14 @@ export default function Home() {
   }
 
   const amplify = () => {
-    toast.success("Amplified period started!")
-    setMatch({ ...match, amplified: true });
+    toast.success("Amplified period started!");
+    setMatch(prevMatch => ({ ...prevMatch, amplified: true }));
     setTimeout(() => {
-      setMatch({ ...match, amplified: false })
-      toast.success("Amplified period ended!")
+      setMatch(prevMatch => ({ ...prevMatch, amplified: false }));
+      toast.success("Amplified period ended!");
     }, 10000);
-  }
+  };
+  
 
   return (
     <div className="h-screen w-full flex flex-col gap-2 p-4 bg-tertiary">
@@ -131,7 +132,7 @@ export default function Home() {
       )}
       {match.started && match.time === 0 && (
         <div className="flex items-center justify-center w-full h-full">
-            <h1>{match.score}</h1>
+            <h1 className="text-5xl font-bold text-white">{match.score}</h1>
             <button
             className="bg-primary shadow-lg rounded-md px-6 py-3 text-black font-bold"
             onClick={() => {
